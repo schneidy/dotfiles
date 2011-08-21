@@ -21,7 +21,6 @@ rescue Exception => ex
   warn "Warning in .irbrc: #{ex.inspect}"
 end
 
-
 # Easily print methods local to an object's class
 class Object
   def local_methods

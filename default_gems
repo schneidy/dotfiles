@@ -1,12 +1,11 @@
 builder
 bundler
 hoe
-hoe-seattlerb
 minitest
 rak
 rake
+rbench
 ruby-graphviz
 rubygems-test
 session
 thor
-wirble
