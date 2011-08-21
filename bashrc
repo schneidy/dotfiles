@@ -1,8 +1,15 @@
 export INPUTRC="~/.inputrc"
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home"
-export PATH="$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/mysql/bin:/Library/PostgreSQL/9.0/bin:/usr/local/ec2/bin:~/bin"
+export PATH="$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Applications/MAMP/Library/bin:/usr/local/mysql/bin:/Library/PostgreSQL/9.0/bin:/usr/local/ec2/bin:~/bin"
 export MANPATH="$MANPATH:/opt/local/man:/usr/local/mysql/man"
 export EDITOR=`which vim`
+
+# Setup Amazon EC2 Command-Line Tools
+export EC2_HOME=~/.ec2
+export PATH=$PATH:$EC2_HOME/bin
+export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
+export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
+#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
 
 # Source global definitions
 [[ -s "/etc/bashrc" ]] && source "/etc/bashrc"
@@ -12,6 +19,9 @@ export EDITOR=`which vim`
 
 # Git completion
 [[ -s "$HOME/.git-completion.sh" ]] && source "$HOME/.git-completion.sh"
+
+# knife completion
+#[[ -s "$HOME/.knife-completion.sh" ]] && source "$HOME/.knife-completion.sh"
 
 # Load RVM into a shell session
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -47,4 +57,5 @@ else
 fi
 unset color_prompt
 
-ssh-add ~/.ssh/id_dsa
+export NODE_PATH="/usr/local/lib/node:/Users/mertonium/.npm:/usr/local/share/npm/bin:/usr/local/lib/node_modules:$NODE_PATH";
+#ssh-add ~/.ssh/id_dsa
