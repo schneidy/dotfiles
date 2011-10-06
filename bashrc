@@ -31,6 +31,9 @@ export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
 # Load RVM into a shell session
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# Load NVM into a shell session
+[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
+
 # Don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
 # Ignore same sucessive entries.
@@ -83,7 +86,6 @@ else
   PS1="\u@\H \w \$(parse_git_branch)\n\$(~/.rvm/bin/rvm-prompt) > "
 fi
 unset color_prompt
-. ~/.nvm/nvm.sh
 
 export NODE_PATH="/usr/local/lib/node:/Users/mertonium/.npm:/usr/local/share/npm/bin:/usr/local/lib/node_modules:$NODE_PATH";
 #ssh-add ~/.ssh/id_dsa
