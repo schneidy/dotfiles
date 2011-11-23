@@ -30,8 +30,8 @@ export CC="/usr/bin/gcc-4.2"
 #[[ -s "$HOME/.knife-completion.sh" ]] && source "$HOME/.knife-completion.sh"
 
 # Load RVM into a shell session
-[[ -s "/Users/mertonium/.rvm/scripts/rvm" ]] && source "/Users/mertonium/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#[[ -s "/Users/mertonium/.rvm/scripts/rvm" ]] && source "/Users/mertonium/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Load NVM into a shell session
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
@@ -89,9 +89,9 @@ function parse_git_branch {
 export LSCOLORS='Exfxcxdxbxegedabagacad'
 
 if [ "$color_prompt" = yes ]; then
-  PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\H \[$(tput setaf 4)\]\w\[$(tput setaf 3)\] \$(parse_git_branch)\[$(tput sgr0)\]\n\[$(tput bold)\]\[$(tput setaf 1)\] \[$(tput sgr0)\]> "
+  PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\H \[$(tput setaf 4)\]\w\[$(tput setaf 3)\] \$(parse_git_branch)\[$(tput sgr0)\]\n\[$(tput bold)\]\[$(tput setaf 1)\]\$(~/.rvm/bin/rvm-prompt) \[$(tput sgr0)\]> "
 else
-  PS1="\u@\H \w \$(parse_git_branch)\n\$(rbenv version-name) > "
+  PS1="\u@\H \w \$(parse_git_branch)\n\$(~/.rvm/bin/rvm-prompt) > "
 fi
 unset color_prompt
 
