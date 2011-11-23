@@ -40,7 +40,7 @@ export CC="/usr/bin/gcc-4.2"
 [[ -s `brew --prefix`/etc/autojump ]] && source `brew --prefix`/etc/autojump
 
 # Init rbenv
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 
 # Don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
@@ -89,7 +89,7 @@ function parse_git_branch {
 export LSCOLORS='Exfxcxdxbxegedabagacad'
 
 if [ "$color_prompt" = yes ]; then
-  PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\H \[$(tput setaf 4)\]\w\[$(tput setaf 3)\] \$(parse_git_branch)\[$(tput sgr0)\]\n\[$(tput bold)\]\[$(tput setaf 1)\]\$(rbenv version-name) \[$(tput sgr0)\]> "
+  PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\H \[$(tput setaf 4)\]\w\[$(tput setaf 3)\] \$(parse_git_branch)\[$(tput sgr0)\]\n\[$(tput bold)\]\[$(tput setaf 1)\] \[$(tput sgr0)\]> "
 else
   PS1="\u@\H \w \$(parse_git_branch)\n\$(rbenv version-name) > "
 fi
