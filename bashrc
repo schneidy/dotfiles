@@ -7,10 +7,10 @@ export EDITOR=`which vim`
 export PROMPT_COMMAND="history -a"
 
 # Setup Amazon EC2 Command-Line Tools
-export EC2_HOME=~/.ec2
-export PATH=$PATH:$EC2_HOME/bin
-export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
-export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
+#export EC2_HOME=~/.ec2
+#export PATH=$PATH:$EC2_HOME/bin
+#export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
+#export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
 #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
 
 # Source global definitions
@@ -29,7 +29,8 @@ export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
 #[[ -s "$HOME/.knife-completion.sh" ]] && source "$HOME/.knife-completion.sh"
 
 # Load RVM into a shell session
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "/Users/mertonium/.rvm/scripts/rvm" ]] && source "/Users/mertonium/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Load NVM into a shell session
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
@@ -87,5 +88,5 @@ else
 fi
 unset color_prompt
 
-export NODE_PATH="/usr/local/lib/node:/Users/mertonium/.npm:/usr/local/share/npm/bin:/usr/local/lib/node_modules:$NODE_PATH";
+#export NODE_PATH="/usr/local/lib/node:/Users/mertonium/.npm:/usr/local/share/npm/bin:/usr/local/lib/node_modules:$NODE_PATH";
 #ssh-add ~/.ssh/id_dsa
