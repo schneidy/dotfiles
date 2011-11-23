@@ -1,10 +1,11 @@
 export INPUTRC="~/.inputrc"
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home"
-export PATH="$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Applications/MAMP/Library/bin:/usr/local/mysql/bin:/Library/PostgreSQL/9.0/bin:/usr/local/ec2/bin:~/bin"
+export PATH="$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/mysql/bin:~/bin"
 export MANPATH="$MANPATH:/opt/local/man:/usr/local/mysql/man"
 export EDITOR=`which vim`
 # Whenever displaying the prompt, write the previous line to disk.
 export PROMPT_COMMAND="history -a"
+export CC="/usr/bin/gcc-4.2"
 
 # Setup Amazon EC2 Command-Line Tools
 #export EC2_HOME=~/.ec2
@@ -34,6 +35,12 @@ export PROMPT_COMMAND="history -a"
 
 # Load NVM into a shell session
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
+
+# Autojump
+[[ -s `brew --prefix`/etc/autojump ]] && source `brew --prefix`/etc/autojump
+
+# Init rbenv
+eval "$(rbenv init -)"
 
 # Don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
@@ -82,9 +89,9 @@ function parse_git_branch {
 export LSCOLORS='Exfxcxdxbxegedabagacad'
 
 if [ "$color_prompt" = yes ]; then
-  PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\H \[$(tput setaf 4)\]\w\[$(tput setaf 3)\] \$(parse_git_branch)\[$(tput sgr0)\]\n\[$(tput bold)\]\[$(tput setaf 1)\]\$(~/.rvm/bin/rvm-prompt) \[$(tput sgr0)\]> "
+  PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\H \[$(tput setaf 4)\]\w\[$(tput setaf 3)\] \$(parse_git_branch)\[$(tput sgr0)\]\n\[$(tput bold)\]\[$(tput setaf 1)\]\$(rbenv version-name) \[$(tput sgr0)\]> "
 else
-  PS1="\u@\H \w \$(parse_git_branch)\n\$(~/.rvm/bin/rvm-prompt) > "
+  PS1="\u@\H \w \$(parse_git_branch)\n\$(rbenv version-name) > "
 fi
 unset color_prompt
 
