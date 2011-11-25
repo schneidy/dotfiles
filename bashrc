@@ -5,7 +5,7 @@ export MANPATH="$MANPATH:/opt/local/man:/usr/local/mysql/man"
 export EDITOR=`which vim`
 # Whenever displaying the prompt, write the previous line to disk.
 export PROMPT_COMMAND="history -a"
-export CC="/usr/bin/gcc-4.2"
+export CC="/usr/bin/gcc"
 
 # Setup Amazon EC2 Command-Line Tools
 #export EC2_HOME=~/.ec2
@@ -30,7 +30,6 @@ export CC="/usr/bin/gcc-4.2"
 #[[ -s "$HOME/.knife-completion.sh" ]] && source "$HOME/.knife-completion.sh"
 
 # Load RVM into a shell session
-#[[ -s "/Users/mertonium/.rvm/scripts/rvm" ]] && source "/Users/mertonium/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Load NVM into a shell session
