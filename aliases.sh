@@ -37,10 +37,20 @@ alias 193='rbenv shell 1.9.3-p0'
 alias jruby='rbenv shell jruby-1.6.5'
 alias rbx='rbenv shell rbx-1.2.4'
 alias ree='rbenv shell ree-1.8.7-2011.03'
-alias rubygems='ssh erik@rubygems.org'
-alias staging='ssh erik@staging.rubygems.org'
-alias travis='ssh travis@ruby3.worker.travis-ci.org'
 alias whitespace='find . -not \( -name .svn -prune -o -name .git -prune \) -type f -print0 | xargs -0 sed -i "" -E "s/[[:space:]]*$//"'
+
+#alias ors='ssh -i ~/.ssh/local_dev.pem root@ec2-204-236-253-28.compute-1.amazonaws.com'
+#alias ors='ssh -i ~/.ssh/local_dev.pem root@ec2-50-16-12-43.compute-1.amazonaws.com'
+#alias rs='ssh -i ~/.ssh/local_dev.pem ubuntu@50.16.237.203'
+alias lbprod='ssh -i ~/.ssh/local.pem ubuntu@locbox.me'
+alias lbstage='ssh ubuntu@ec2-50-16-237-203.compute-1.amazonaws.com -i ~/.ssh/local_dev.pem'
+alias decepticon='ssh ubuntu@107.22.185.246 -i ~/.ssh/deal_engine_dev.pem'
+#alias rpp='ssh -L 3307:127.0.0.1:3306 -i ~/.ssh/local.pem ubuntu@locbox.me'
+#alias rsp='ssh -L 3309:ec2-204-236-253-28.compute-1.amazonaws.com:3306 -i ~/.ssh/local.pem root@ec2-204-236-253-28.compute-1.amazonaws.com'
+#alias rsp='ssh -L 3309:127.0.0.1:3306 -i ~/.ssh/local_dev.pem ubuntu@50.16.237.203'
+#alias rdp='ssh -L 3308:ec2-50-19-141-169.compute-1.amazonaws.com:3306 -i ~/.ssh/deal_engine_dev.pem root@ec2-50-19-141-169.compute-1.amazonaws.com'
+#alias mrp='ssh -L 27017:ec2-50-16-27-118.compute-1.amazonaws.com:27017 -i ~/.ssh/local.pem root@ec2-50-16-27-118.compute-1.amazonaws.com'
+
 
 function each_ruby {
   for v in `rbenv versions --bare`
