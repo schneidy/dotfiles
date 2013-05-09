@@ -94,5 +94,5 @@ else
 fi
 unset color_prompt
 
-#export NODE_PATH="/usr/local/lib/node:/Users/mertonium/.npm:/usr/local/share/npm/bin:/usr/local/lib/node_modules:$NODE_PATH";
+#export NODE_PATH="/usr/local/lib/node:/Users/schneidy/.npm:/usr/local/share/npm/bin:/usr/local/lib/node_modules:$NODE_PATH";
 #ssh-add ~/.ssh/id_dsa
