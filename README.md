@@ -1,5 +1,6 @@
-# Erik Michaels-Ober's Dotfiles
+# Dan Schneiderman's Dotfiles
 These are files to configure a shell just the way I like it.
+Files taken from Erik Michaels-Ober repo
 
 ## <a name="design"></a>Design Principles
 With appologies to Stanley Kubrick:
