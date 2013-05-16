@@ -31,3 +31,5 @@
   quotepath = false
 [push]
   default = tracking
+[credential]
+	helper = osxkeychain
